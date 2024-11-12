@@ -1,8 +1,21 @@
-# NetCDF
-*.nc
-
 # Lectures directory
 lectures/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Data
+data/
+
+# .env
+.env
+
+# PyCharm Configs
+.idea/
+
+# Resourcs
+resources/
+
+# Homework 03
+homework/homework_3/frames
+homework/homework_3/pacific_ocean_temperature.mp4
