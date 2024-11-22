@@ -3,10 +3,10 @@
 In this project, I will investigate the role of a weakening Atlantic Meridional Overturning Circulation (AMOC) in the
 formation of the North Atlantic warming hole. In particular, I will observe the following science question:
 
-_What is the impact of freshwater inflow from Greenland ice melt on the formation and sustainability of the warming hole
+_What is the impact of freshwater inflow from increased precipitation on the formation and sustainability of the warming hole
 in the North Atlantic?_
 
-I will use the MIT General Circulation Model (MITgcm) to run two simulations over a 15-year period: a control run with
+I will use the MIT General Circulation Model (MITgcm) to run two simulations over a year period: a control run with
 current freshwater input and a freshwater influx run with increased meltwater from Greenland in order to examine the
 effects of freshwater inflow from Greenland ice melt on the formation and sustainability of the North Atlantic warming
 hole.
