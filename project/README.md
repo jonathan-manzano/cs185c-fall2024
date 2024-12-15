@@ -21,7 +21,7 @@ while the Tropical Atlantic and Southern Hemisphere Oceans will display warmer t
 For the initial conditions,
 the state of the ECCO Version 5 Model in January 2009 will be used.
 In addition,
-boundary and external forcing conditions for this model will be constructed from the ECCO Version 5 model output.
+external forcing conditions for this model will be constructed from the ECCO Version 5 model output.
 To analyze the results, a timeseries of temperature off the East Coast of Florida on the Gulf Stream will be created.
 For visualization,
 a movie of temperature differences between the models will be generated.  
