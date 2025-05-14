@@ -12,13 +12,13 @@
 
 
  &EXF_NML_02
- atempfile         = 'exf/EIG_tmp2m_degC_plus_ECCO_v4r1_ctrl',
- aqhfile           = 'exf/EIG_spfh2m_plus_ECCO_v4r1_ctrl',
- precipfile        = 'exf/EIG_rain_plus_ECCO_v4r1_ctrl',
- uwindfile         = 'exf/EIG_u10m',
- vwindfile         = 'exf/EIG_v10m',
- swdownfile        = 'exf/EIG_dsw_plus_ECCO_v4r1_ctrl',
- lwdownfile        = 'exf/EIG_dlw_plus_ECCO_v4r1_ctrl',
+ atempfile         = 'exf/ATEMP_2009',
+ aqhfile           = 'exf/AQG_2009',
+ precipfile        = 'exf/PRECIP_2009',
+ uwindfile         = 'exf/UWIND_2009',
+ vwindfile         = 'exf/VWIND_2009',
+ swdownfile        = 'exf/SWDOWN_2009',
+ lwdownfile        = 'exf/LWDOWN_2009',
 #
  atempstartdate1   = 19920101,
  atempstartdate2   = 000000,
@@ -121,24 +121,3 @@
  lwdown_nlon        = 512,
  lwdown_nlat        = 256,
  /
-
- &EXF_NML_OBCS
-# obcsEstartdate1     = 19920101,
-# obcsEstartdate2     = 120000,
-# obcsEperiod         = 86400.0,
-#
-# obcsSstartdate1     = 19920101,
-# obcsSstartdate2     = 120000,
-# obcsSperiod         = 86400.0,
-#
-# obcsNstartdate1     = 19920101,
-# obcsNstartdate2     = 120000,
-# obcsNperiod         = 86400.0,
-#
-# obcsWstartdate1     = 19920101,
-# obcsWstartdate2     = 120000,
-# obcsWperiod         = 86400.0,
-#
- useOBCSYearlyFields = .TRUE.,
-#
- &
