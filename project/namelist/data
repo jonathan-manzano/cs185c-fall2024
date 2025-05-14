@@ -25,4 +25,5 @@
 
 # Input datasets
  &PARM05
+ bathyFile = 'global_bathymetry.bin',
  &
