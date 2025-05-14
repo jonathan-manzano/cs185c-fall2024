@@ -1,0 +1,23 @@
+# ====================
+# | Model parameters |
+# ====================
+
+# Continuous equation parameters
+ &PARM01
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ &
+
+# Time stepping parameters
+ &PARM03
+ &
+
+# Gridding parameters
+ &PARM04
+ &
+
+# Input datasets
+ &PARM05
+ &
