@@ -12,9 +12,11 @@ dependencies = [
     "jupyter>=1.1.1",
     "matplotlib>=3.10.1",
     "moviepy>=2.1.2",
+    "nbqa>=1.9.1",
     "netcdf4>=1.7.2",
     "notebook>=7.4.1",
     "numpy>=2.2.5",
+    "ruff>=0.11.9",
     "scipy>=1.15.2",
     "xarray>=2025.3.1",
 ]
