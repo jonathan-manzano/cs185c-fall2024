@@ -16,6 +16,11 @@
 
 # Gridding parameters
  &PARM04
+ usingSphericalPolarGrid=.TRUE.,
+ delX=0.5,
+ delY=0.5,
+ xgOrigin=-180,
+ ygOrigin=-90,
  &
 
 # Input datasets
