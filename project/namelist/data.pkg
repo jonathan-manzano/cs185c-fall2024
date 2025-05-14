@@ -1,5 +1,7 @@
 # Packages
  &PACKAGES
  useCAL         = .TRUE.,
+ useDIAGNOSTICS = .TRUE.,
  useEXF         = .TRUE.,
+ useOBCS        = .TRUE.,
  &
