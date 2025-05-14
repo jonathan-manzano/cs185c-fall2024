@@ -27,7 +27,7 @@
  &PARM03
  niter0=0,
  deltaT=300.,
- nTimeSteps = 288,
+ nTimeSteps = 1200,
  pChkptFreq=2592000.,
  dumpInitAndLast=.FALSE.,
  writePickupAtEnd=.TRUE.,
@@ -36,9 +36,9 @@
 # Gridding parameters
  &PARM04
  usingSphericalPolarGrid=.TRUE.,
- delX=1,
- delY=1,
- xgOrigin=-180,
+ delX=360*1,
+ delY=180*1,
+ xgOrigin=0,
  ygOrigin=-90,
  &
 
