@@ -3,5 +3,6 @@
  useCAL         = .TRUE.,
  useDIAGNOSTICS = .TRUE.,
  useEXF         = .TRUE.,
- useOBCS        = .TRUE.,
+ useGGL90       = .TRUE.,
+ useGMREDI      = .TRUE.,
  &
