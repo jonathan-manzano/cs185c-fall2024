@@ -7,6 +7,6 @@ It provided us the opportunity to *sea*
 (haha)
 how we can break down the physical properties of the ocean.
 
-The Coursework follows along with Dr. Wood's online textbook [Numerical Ocean Modeling](https://profmikewood.github.io/ocean_modeling_book/intro.html).
+The Coursework follows along with Dr. Wood's online textbook:
 
-It contains completed homework and a semester project
+[![Numerical Ocean Modeling](assets/numerical-ocean-modeling-logo.png)](https://profmikewood.github.io/ocean_modeling_book/intro.html)
