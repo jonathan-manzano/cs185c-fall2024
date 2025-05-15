@@ -1,7 +1,7 @@
 # GM+Redi package parameters:
 
 
- &GM_PARM01 
+ &GM_PARM01
   GM_Small_Number  = 1.D-20,
   GM_slopeSqCutoff = 1.D+08,
   GM_AdvForm         = .TRUE.,
