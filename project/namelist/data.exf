@@ -4,53 +4,51 @@
 
  &EXF_NML_01
  exf_albedo        = 0.1,
-# useExfZenIncoming = .TRUE.,
-# select_ZenAlbedo  = 1,
- useExfYearlyFields= .TRUE.,
+ useExfYearlyFields= .FALSE.,
  useExfCheckRange  = .FALSE.,
  exf_iprec         = 32,
- exf_yftype        = 'RL',
-
  /
 
-
  &EXF_NML_02
- atempfile         = 'exf/EIG_tmp2m_degC_plus_ECCO_v4r1_ctrl',
- aqhfile           = 'exf/EIG_spfh2m_plus_ECCO_v4r1_ctrl',
- precipfile        = 'exf/EIG_rain_plus_ECCO_v4r1_ctrl',
- uwindfile         = 'exf/EIG_u10m',
- vwindfile         = 'exf/EIG_v10m',
- swdownfile        = 'exf/EIG_dsw_plus_ECCO_v4r1_ctrl',
- lwdownfile        = 'exf/EIG_dlw_plus_ECCO_v4r1_ctrl',
-#
- atempstartdate1   = 19920101,
+# --- 1. File Names (Must match your Python output) ---
+ atempfile         = 'exf/ATEMP_2009',
+ aqhfile           = 'exf/AQH_2009',
+# NOTE: Use your "Dry" or "Wet" file here for the experiment runs!
+# For Control run: 'exf/PRECIP_Control_2009'
+ precipfile        = 'exf/PRECIP_Control_2009',
+ uwindfile         = 'exf/UWIND_2009',
+ vwindfile         = 'exf/VWIND_2009',
+ swdownfile        = 'exf/SWDOWN_2009',
+ lwdownfile        = 'exf/LWDOWN_2009',
+
+# --- 2. Timing (Start Date = Jan 1, 2009) ---
+ atempstartdate1   = 20090101,
  atempstartdate2   = 000000,
  atempperiod       = 21600.0,
-#
- aqhstartdate1     = 19920101,
+
+ aqhstartdate1     = 20090101,
  aqhstartdate2     = 000000,
  aqhperiod         = 21600.0,
-#
- precipstartdate1  = 19920101,
- precipstartdate2  = 030000,
+
+ precipstartdate1  = 20090101,
+ precipstartdate2  = 000000,
  precipperiod      = 21600.0,
-#
- uwindstartdate1   = 19920101,
+
+ uwindstartdate1   = 20090101,
  uwindstartdate2   = 000000,
  uwindperiod       = 21600.0,
-#
- vwindstartdate1   = 19920101,
+
+ vwindstartdate1   = 20090101,
  vwindstartdate2   = 000000,
  vwindperiod       = 21600.0,
-#
- swdownstartdate1  = 19920101,
- swdownstartdate2  = 030000,
+
+ swdownstartdate1  = 20090101,
+ swdownstartdate2  = 000000,
  swdownperiod      = 21600.0,
-#
- lwdownstartdate1  = 19920101,
- lwdownstartdate2  = 030000,
+
+ lwdownstartdate1  = 20090101,
+ lwdownstartdate2  = 000000,
  lwdownperiod      = 21600.0,
-#
  /
 
  &EXF_NML_03
@@ -59,68 +57,55 @@
  exf_inscal_lwdown = -1.0,
  /
 
-
+# --- 3. Grid Definition ( simplified for pre-interpolated data) ---
  &EXF_NML_04
- atemp_lon0        =   0.0000000D0,
- atemp_lon_inc     =   0.7031250D0,
- atemp_lat0        = -89.4628220D0,
- atemp_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- atemp_nlon        = 512,
- atemp_nlat        = 256,
-#
- aqh_lon0        =   0.0000000D0,
- aqh_lon_inc     =   0.7031250D0,
- aqh_lat0        = -89.4628220D0,
- aqh_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- aqh_nlon        = 512,
- aqh_nlat        = 256,
-#
- precip_lon0        =   0.0000000D0,
- precip_lon_inc     =   0.7031250D0,
- precip_lat0        = -89.4628220D0,
- precip_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- precip_nlon        = 512,
- precip_nlat        = 256,
-#
- uwind_lon0        =   0.0000000D0,
- uwind_lon_inc     =   0.7031250D0,
- uwind_lat0        = -89.4628220D0,
- uwind_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- uwind_nlon        = 512,
- uwind_nlat        = 256,
-#
- vwind_lon0        =   0.0000000D0,
- vwind_lon_inc     =   0.7031250D0,
- vwind_lat0        = -89.4628220D0,
- vwind_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- vwind_nlon        = 512,
- vwind_nlat        = 256,
-#
- swdown_lon0        =   0.0000000D0,
- swdown_lon_inc     =   0.7031250D0,
- swdown_lat0        = -89.4628220D0,
- swdown_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- swdown_nlon        = 512,
- swdown_nlat        = 256,
-#
- lwdown_lon0        =   0.0000000D0,
- lwdown_lon_inc     =   0.7031250D0,
- lwdown_lat0        = -89.4628220D0,
- lwdown_lat_inc     = 0.6958694,0.6999817,0.7009048,0.7012634,0.7014313,
-                     245*0.7017418,
-                     0.7014313,0.7012634,0.7009048,0.6999817,0.6958694
- lwdown_nlon        = 512,
- lwdown_nlat        = 256,
+# Since data is already on model grid, we define the start/inc simply:
+ atemp_lon0 = -179.75,
+ atemp_lat0 = -89.75,
+ atemp_nlon = 720,
+ atemp_nlat = 360,
+ atemp_lon_inc = 0.5,
+ atemp_lat_inc = 0.5,
+
+ aqh_lon0 = -179.75,
+ aqh_lat0 = -89.75,
+ aqh_nlon = 720,
+ aqh_nlat = 360,
+ aqh_lon_inc = 0.5,
+ aqh_lat_inc = 0.5,
+
+ precip_lon0 = -179.75,
+ precip_lat0 = -89.75,
+ precip_nlon = 720,
+ precip_nlat = 360,
+ precip_lon_inc = 0.5,
+ precip_lat_inc = 0.5,
+
+ uwind_lon0 = -179.75,
+ uwind_lat0 = -89.75,
+ uwind_nlon = 720,
+ uwind_nlat = 360,
+ uwind_lon_inc = 0.5,
+ uwind_lat_inc = 0.5,
+
+ vwind_lon0 = -179.75,
+ vwind_lat0 = -89.75,
+ vwind_nlon = 720,
+ vwind_nlat = 360,
+ vwind_lon_inc = 0.5,
+ vwind_lat_inc = 0.5,
+
+ swdown_lon0 = -179.75,
+ swdown_lat0 = -89.75,
+ swdown_nlon = 720,
+ swdown_nlat = 360,
+ swdown_lon_inc = 0.5,
+ swdown_lat_inc = 0.5,
+
+ lwdown_lon0 = -179.75,
+ lwdown_lat0 = -89.75,
+ lwdown_nlon = 720,
+ lwdown_nlat = 360,
+ lwdown_lon_inc = 0.5,
+ lwdown_lat_inc = 0.5,
  /
