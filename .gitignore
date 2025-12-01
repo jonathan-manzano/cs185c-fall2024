@@ -259,7 +259,9 @@ lectures/
 .ipynb_checkpoints/
 
 # Data
-data/
+project/data
+project/eccoseas
+project/input/
 
 # PyCharm Configs
 .idea/
@@ -276,3 +278,5 @@ MITgcm/
 
 # eccoseas
 project/notebooks/eccoseas/
+/project/eccoseas/
+/project/eccoseas/
