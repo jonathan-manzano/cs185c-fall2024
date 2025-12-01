@@ -2,70 +2,44 @@
 #
  &diagnostics_list
      dumpAtLast = .TRUE.,
-#--
-# Example of a 2d field output in daily snapshots
-#--
+#
+#-- 1. Daily 2D Surface Height (Stability Check) --
   fields(1,1) = 'ETAN    ',
   fileName(1) = 'diags/EtaN_day_snap/EtaN_day_snap',
   frequency(1) =  -86400.,
 #
-#--
-# Example of a 2d field output in monthly means
-#--
-  fields(1,2) = 'ETAN    ',
-  fileName(2) = 'diags/EtaN_mon_mean/EtaN_mon_mean',
-  frequency(2) =  2592000.,
+#-- 2. Daily Surface Temp/Salt (CRITICAL FOR MOVIE & FLORIDA TS) --
+# This gives you the high-res surface data for your visualization
+  fields(1:2,2) = 'THETA   ','SALT    ',
+  fileName(2) = 'diags/TS_surf_daily/TS_surf_daily',
+  frequency(2) = -86400.,
+  levels(:,2) = 1,
 #
-#--
-# Example of 3d fields output in monthly shapshots
-#--
+#-- 3. Daily Surface Velocity (For Gulf Stream visualization) --
+# Changed from 4-hourly to Daily to save space
   fields(1:2,3) = 'UVEL    ','VVEL    ',
-  fileName(3) = 'diags/vel_3D_mon_snap/vel_3D_mon_snap',
-  frequency(3) = -2592000.,
+  fileName(3) = 'diags/vel_surf_daily/vel_surf_daily',
+  frequency(3) = -86400.,
+  levels(:,3) = 1,
 #
-#--
-# Example of 3d fields output in monthly means
-#--
-  fields(1:2,4) = 'THETA   ','SALT    ',
-  fileName(4) = 'diags/TS_3D_mon_mean/TS_3D_mon_mean',
-  frequency(4) = 2592000.,
+#-- 4. Weekly 3D Means (For AMOC Calculation) --
+# Changed from Monthly to Weekly (approx 604800 seconds)
+# This allows you to calculate the overturning streamfunction with decent resolution
+  fields(1:2,4) = 'UVEL    ','VVEL    ',
+  fileName(4) = 'diags/vel_3D_week_mean/vel_3D_week_mean',
+  frequency(4) = 604800.,
 #
-#--
-# Example of 3d fields output as snapshots at the surface only
-#--
+#-- 5. Weekly 3D Temp/Salt Means (For Heat Content/Freshwater depth) --
+# To see if the freshwater in Nordic seas sinks or stays at surface
   fields(1:2,5) = 'THETA   ','SALT    ',
-  fileName(5) = 'diags/TS_surf_snap/TS_surf_daily_snap',
-  frequency(5) = -86400.,
-  levels(:,5) = 1,
+  fileName(5) = 'diags/TS_3D_week_mean/TS_3D_week_mean',
+  frequency(5) = 604800.,
 #
-##--
-# Example of 3d fields output as snapshots velocity at the surface only
-##--
-  fields(1:2,6) = 'UVEL    ','VVEL    ',
-  fileName(6) = 'diags/vel_surf_snap/vel_surf_4hr_snap',
-  frequency(6) = -14400.,
-  levels(:,6) = 1,
-#
-##--
-# Example of radiation output in monthly means
-##--
-  fields(1:4, 7) = 'EXFlwnet', 'EXFswnet', 'EXFlwdn', 'EXFswdn',
-  fileName(7) = 'diags/radiation/radiation_mon_mean',
-  frequency(7) = 2592000.,
-#
-##--
-# Example of air temperature output in monthly means
-##--
-  fields(1, 8) = 'EXFatemp',
-  fileName(8) = 'diags/atemp/atemp_mon_mean',
-  frequency(8) = 2592000.,
-#
-#--
-# NOTE: '-' denotes snapshot (as opposed to mean)
-# - denotes snapshot (as opposed to mean)
-
+#-- 6. Monthly Forcing Averages (Sanity Check) --
+  fields(1:3, 6) = 'EXFpreci', 'EXFatemp', 'EXFaqh  ',
+  fileName(6) = 'diags/forcing/forcing_mon_mean',
+  frequency(6) = 2592000.,
  &
 
-# Parameter for Diagnostics of per level statistics:
  &DIAG_STATIS_PARMS
  &
