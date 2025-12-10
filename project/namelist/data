@@ -12,9 +12,9 @@
  saltAdvScheme=7,
  StaggerTimeStep=.TRUE.,
  useSingleCPUio=.TRUE.,
- exactConserv=.TRUE.,
+# exactConserv=.TRUE.,
  useRealFreshWaterFlux=.TRUE.,
- debugLevel=0,
+ debugLevel=0,k
  &
 
 # Elliptic solver parameters
@@ -25,10 +25,9 @@
 
 # Time stepping parameters
  &PARM03
- abEps=0.1
- niter0=110880,
+ abEps=0.1,
+ niter0=0,
  deltaT=60.,
-# nTimeSteps = 100,
  nTimeSteps = 525600,
  pChkptFreq=2592000.,
  dumpInitAndLast=.FALSE.,
@@ -38,13 +37,12 @@
 # Gridding parameters
  &PARM04
  usingSphericalPolarGrid=.TRUE.,
-# delX = 720*0.5,
-# delY = 360*0.5,
- xgOrigin = 0,
+ xgOrigin = -180,
  ygOrigin = -90,
  dxSpacing=0.5,
  dySpacing=0.5,
 
+ # Vertical Levels
  delR = 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.01,
         10.03, 10.11, 10.32, 10.80, 11.76, 13.42, 16.04, 19.82, 24.85,
         31.10, 38.42, 46.50, 55.00, 63.50, 71.58, 78.90, 85.15, 90.18,
@@ -55,7 +53,6 @@
 
 # Input datasets
  &PARM05
-# Ensure this matches the file currently in your input directory
  bathyFile = 'earth_bathymetry.bin',
  hydrogThetaFile = 'THETA_IC.bin',
  hydrogSaltFile = 'SALT_IC.bin',
