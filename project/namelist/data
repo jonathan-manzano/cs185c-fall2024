@@ -14,7 +14,7 @@
  useSingleCPUio=.TRUE.,
 # exactConserv=.TRUE.,
  useRealFreshWaterFlux=.TRUE.,
- debugLevel=0,k
+ debugLevel=0,
  &
 
 # Elliptic solver parameters
