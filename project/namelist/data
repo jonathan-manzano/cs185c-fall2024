@@ -33,8 +33,8 @@
  &PARM03
  abEps=0.1,
  niter0=0,
- deltaT=1200.,
- nTimeSteps=26280,
+ deltaT=300.,
+ nTimeSteps=105120,
  pChkptFreq=2592000.,
  dumpInitAndLast=.TRUE.,
  writePickupAtEnd=.TRUE.,
