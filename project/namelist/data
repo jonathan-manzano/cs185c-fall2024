@@ -12,7 +12,7 @@
  saltAdvScheme=7,
  StaggerTimeStep=.TRUE.,
  useSingleCPUio=.TRUE.,
-# exactConserv=.TRUE.,
+ exactConserv=.TRUE.,
  useRealFreshWaterFlux=.TRUE.,
  debugLevel=0,
  &
