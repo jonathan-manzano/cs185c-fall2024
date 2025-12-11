@@ -13,9 +13,18 @@
 # --- 1. File Names (Must match your Python output) ---
  atempfile         = 'exf/ATEMP_2009',
  aqhfile           = 'exf/AQH_2009',
-# NOTE: Use your "Dry" or "Wet" file here for the experiment runs!
-# For Control run: 'exf/PRECIP_Control_2009'
- precipfile        = 'exf/PRECIP_Control_2009',
+
+# === PRECIPITATION SELECTION ===
+# Un-comment EXACTLY ONE of the following lines for your experiment:
+# -----------------------------------------------------------------
+# 1. Control Run:
+ precipfile        = 'exf/PRECIP_2009',
+# 2. Hosing Experiment (Wet Nordic Seas):
+# precipfile        = 'exf/PRECIP_Nordic_Hosing_2009',
+# 3. Zero Experiment (Dry Nordic Seas):
+# precipfile        = 'exf/PRECIP_Nordic_Zero_2009',
+# -----------------------------------------------------------------
+
  uwindfile         = 'exf/UWIND_2009',
  vwindfile         = 'exf/VWIND_2009',
  swdownfile        = 'exf/SWDOWN_2009',
@@ -52,14 +61,14 @@
  /
 
  &EXF_NML_03
- exf_offset_atemp  = 273.15,
- exf_inscal_swdown = -1.0,
- exf_inscal_lwdown = -1.0,
+# Parsed from Python output
+ exf_offset_atemp  = 0.0,
+ exf_inscal_swdown = 1.0,
+ exf_inscal_lwdown = 1.0,
  /
 
 # --- 3. Grid Definition ( simplified for pre-interpolated data) ---
  &EXF_NML_04
-# Since data is already on model grid, we define the start/inc simply:
  atemp_lon0 = -179.75,
  atemp_lat0 = -89.75,
  atemp_nlon = 720,
