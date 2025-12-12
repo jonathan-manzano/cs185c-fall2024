@@ -30,7 +30,7 @@
  deltaT=60.,
  nTimeSteps=525600,
  pChkptFreq=2592000.,
- dumpInitAndLast=.TRUE.,
+ dumpInitAndLast=.FALSE.,
  writePickupAtEnd=.TRUE.,
  &
 
@@ -62,6 +62,4 @@
  uVelInitFile = 'UVEL_IC.bin',
  vVelInitFile = 'VVEL_IC.bin',
  pSurfInitFile = 'ETAN_IC.bin',
- checkIniTemp    = .FALSE.,
- checkIniSalt    = .FALSE.,
  &

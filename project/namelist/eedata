@@ -6,7 +6,6 @@
  &EEPARMS
  nTx=1,
  nTy=1,
- usingMPI=.TRUE.,
  &
 # Note: Some systems use & as the namelist terminator (as shown here).
 #       Other systems use a / character.

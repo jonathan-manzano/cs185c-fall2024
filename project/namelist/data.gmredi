@@ -4,7 +4,7 @@
  GM_slopeSqCutoff = 1.D+08,
  GM_AdvForm         = .TRUE.,
  GM_isopycK         = 80.,
- GM_background_K    = 800.,
+ GM_background_K    = 80.,
  GM_maxSlope        = 4.D-3,
  GM_taper_scheme    = 'ldd97',
  GM_Kmin_horiz      = 50.,
