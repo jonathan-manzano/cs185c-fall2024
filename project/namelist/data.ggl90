@@ -5,7 +5,6 @@
  GGL90alpha=30.,
  GGL90TKEmin  = 1.e-7,
  GGL90TKEbottom = 1.e-6,
- GGL90mixingLengthMin=1.e-4,
  mxlMaxFlag =2,
  mxlSurfFlag=.TRUE.,
  /
