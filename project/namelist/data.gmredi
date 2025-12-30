@@ -7,7 +7,7 @@
  GM_background_K    = 80.,
  GM_maxSlope        = 4.D-3,
  GM_taper_scheme    = 'ldd97',
- GM_Kmin_horiz      = 50.,
+ GM_Kmin_horiz      = 8.,
  GM_Scrit           = 4.D-3,
  GM_Sd              = 1.D-3,
  /
