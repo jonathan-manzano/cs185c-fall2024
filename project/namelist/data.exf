@@ -4,7 +4,7 @@
 
  &EXF_NML_01
  useExfCheckRange=.TRUE.,
- useExfYearlyFields=.FALSE.,
+ useExfYearlyFields=.TRUE.,
  exf_albedo=0.1,
  &
 
@@ -13,20 +13,17 @@
 # Un-comment EXACTLY ONE of the following lines for your experiment:
 # -----------------------------------------------------------------
 # 1. Control Run:
- precipfile        = 'exf/PRECIP_2009',
+ precipfile        = 'exf/PRECIP',
 # 2. Hosing Experiment (Wet Nordic Seas):
-# precipfile        = 'exf/PRECIP_Nordic_Hosing_2009',
-# 3. Zero Experiment (Dry Nordic Seas):
-# precipfile        = 'exf/PRECIP_Nordic_Zero_2009',
+# precipfile        = 'exf/PRECIP_HOSING',
 # -----------------------------------------------------------------
 #
- atempfile         = 'exf/ATEMP_2009',
- aqhfile           = 'exf/AQH_2009',
- uwindfile         = 'exf/UWIND_2009',
- vwindfile         = 'exf/VWIND_2009',
- swdownfile        = 'exf/SWDOWN_2009',
- lwdownfile        = 'exf/LWDOWN_2009',
-
+ atempfile         = 'exf/ATEMP',
+ aqhfile           = 'exf/AQH',
+ uwindfile         = 'exf/UWIND',
+ vwindfile         = 'exf/VWIND',
+ swdownfile        = 'exf/SWDOWN',
+ lwdownfile        = 'exf/LWDOWN',
 #
  atempstartdate1   = 20090101,
  atempstartdate2   = 030000,
