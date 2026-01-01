@@ -3,8 +3,8 @@
 # =====================================================================
  &GGL90_PARM01
  GGL90alpha=30.,
- GGL90TKEmin  = 1.e-7,
- GGL90TKEbottom = 1.e-6,
- mxlMaxFlag =2,
+ GGL90TKEmin=1.e-7,
+ GGL90TKEbottom=1.e-6,
+ mxlMaxFlag=2,
  mxlSurfFlag=.TRUE.,
- /
+ &

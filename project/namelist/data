@@ -15,20 +15,48 @@
  exactConserv=.TRUE.,
  useRealFreshWaterFlux=.TRUE.,
  debugLevel=0,
+ #
+ # add these parameters:
+ viscAr=5.6614e-04,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.TRUE.,
+ rhonil=1027.5,
+ rhoConstFresh=999.8,
+ eosType='JMD95Z',
+#
+# use 2.15 for higer res models:
+ viscC4Leith=1.5,
+ viscC4Leithd=1.5,
+#
+# continue adding:
+ viscA4GridMax=0.5,
+ useAreaViscLength=.TRUE.,
+ selectVortScheme=2,
+ bottomDragQuadratic=0.0021,
+ selectImplicitDrag=2,
+ vectorInvariantMomentum=.TRUE.,
+ implicitFreeSurface=.TRUE.,
+ implicSurfPress=0.6,
+ implicDiv2DFlow=0.6,
+#
+# configure for your delR:
+ hFacMinDr=10.,
+ hFacMin=0.3,
+ hFacInf=0.1,
+ hFacSup=5.,
  &
 
 # Elliptic Solver Parameters
  &PARM02
- cg2dMaxIters=500,
- cg2dTargetResidual=1.E-13,
+ cg2dMaxIters=300,
+ cg2dTargetResidual=1.E-10,
  &
 
 # Time Stepping Parameters
  &PARM03
- abEps=0.1,
  niter0=0,
- deltaT=60.,
- nTimeSteps=525600,
+ deltaT=300.,
+ nTimeSteps=105120,
  pChkptFreq=2592000.,
  dumpInitAndLast=.FALSE.,
  writePickupAtEnd=.TRUE.,
@@ -37,25 +65,23 @@
 # Griding Parameters
  &PARM04
  usingSphericalPolarGrid=.TRUE.,
- xgOrigin = 0,
- ygOrigin = -90,
- dxSpacing=0.5,
- dySpacing=0.5,
-
- delR = 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.01,
-        10.03, 10.11, 10.32, 10.80, 11.76, 13.42, 16.04, 19.82, 24.85,
-        31.10, 38.42, 46.50, 55.00, 63.50, 71.58, 78.90, 85.15, 90.18,
-        93.96, 96.58, 98.25, 99.25,100.01,101.33,104.56,111.33,122.83,
-        139.09,158.94,180.83,203.55,226.50,249.50,272.50,295.50,318.50,
-        341.50,364.50,387.50,410.50,433.50,456.50,
+ delX=720*0.5,
+ delY=360*0.5,
+ xgOrigin=0,
+ ygOrigin=-90,
+ delR=10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.01, 10.03, 10.11,
+      10.32, 10.80, 11.76, 13.42, 16.04, 19.82, 24.85, 31.10, 38.42, 46.50,
+      55.00, 63.50, 71.58, 78.90, 85.15, 90.18, 93.96, 96.58, 98.25, 99.25,
+     100.01,101.33,104.56,111.33,122.83,139.09,158.94,180.83,203.55,226.50,
+     249.50,272.50,295.50,318.50,341.50,364.50,387.50,410.50,433.50,456.50,
  &
 
 # Input Datasets
  &PARM05
- bathyFile = 'earth_bathymetry.bin',
- hydrogThetaFile = 'THETA_IC.bin',
- hydrogSaltFile = 'SALT_IC.bin',
- uVelInitFile = 'UVEL_IC.bin',
- vVelInitFile = 'VVEL_IC.bin',
- pSurfInitFile = 'ETAN_IC.bin',
+ bathyFile='earth_bathymetry.bin',
+ hydrogThetaFile='THETA_IC.bin',
+ hydrogSaltFile='SALT_IC.bin',
+ uVelInitFile='UVEL_IC.bin',
+ vVelInitFile='VVEL_IC.bin',
+ pSurfInitFile='ETAN_IC.bin',
  &
