@@ -15,8 +15,8 @@
  exactConserv=.TRUE.,
  useRealFreshWaterFlux=.TRUE.,
  debugLevel=0,
- #
- # add these parameters:
+#
+# add these parameters:
  viscAr=5.6614e-04,
  no_slip_sides=.FALSE.,
  no_slip_bottom=.TRUE.,
