@@ -92,7 +92,7 @@ C   for tracers (after scaling by constant Prandtl number)
 C-- Time-stepping code options:
 
 C o Include/exclude combined Surf.Pressure and Drag Implicit solver code
-#undef ALLOW_SOLVE4_PS_AND_DRAG
+#define ALLOW_SOLVE4_PS_AND_DRAG
 
 C o Include/exclude Implicit vertical advection code
 #define INCLUDE_IMPLVERTADV_CODE
@@ -107,14 +107,14 @@ C-- Model formulation options:
 
 C o Allow/exclude "Exact Convervation" of fluid in Free-Surface formulation
 C   that ensures that d/dt(eta) is exactly equal to - Div.Transport
-#define EXACT_CONSERV
+C #define EXACT_CONSERV
 
 C o Allow the use of Non-Linear Free-Surface formulation
 C   this implies that grid-cell thickness (hFactors) varies with time
 #define NONLIN_FRSURF
 C o Disable code for rStar coordinate and/or code for Sigma coordinate
-c#define DISABLE_RSTAR_CODE
-c#define DISABLE_SIGMA_CODE
+C #define DISABLE_RSTAR_CODE
+C #define DISABLE_SIGMA_CODE
 
 C o Include/exclude nonHydrostatic code
 #undef ALLOW_NONHYDROSTATIC
@@ -152,7 +152,7 @@ C   The preferred method is specifying a value for viscAhGrid or viscA4Grid
 C   in data which is then automatically scaled by the grid size;
 C   the old method of specifying viscAh/viscA4 and this flag is provided
 C   for completeness only (and for use with the adjoint).
-c#define ISOTROPIC_COS_SCALING
+C #define ISOTROPIC_COS_SCALING
 
 C o This flag selects the form of COSINE(lat) scaling of bi-harmonic term.
 C *only for use on a lat-lon grid*
@@ -162,7 +162,7 @@ C   Setting this flag here affects both momentum and tracer equation unless
 C   it is set/unset again in other header fields (e.g., GAD_OPTIONS.h).
 C   The definition of the flag is commented to avoid interference with
 C   such other header files.
-c#define COSINEMETH_III
+C #define COSINEMETH_III
 
 C o Use "OLD" UV discretisation near boundaries (*not* recommended)
 C   Note - only works with pkg/mom_fluxform and "no_slip_sides=.FALSE."
@@ -188,8 +188,8 @@ C   each of the above pkg get its own options from its specific option file.
 C   Although this method, inherited from ECCO setup, has been traditionally
 C   used for all adjoint built, work is in progress to allow to use the
 C   standard method also for adjoint built.
-c#ifdef PACKAGES_CONFIG_H
-c# include "ECCO_CPPOPTIONS.h"
-c#endif
+C #ifdef PACKAGES_CONFIG_H
+C # include "ECCO_CPPOPTIONS.h"
+C #endif
 
 #endif /* CPP_OPTIONS_H */
